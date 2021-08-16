@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OriginSix</title>
 
+    <!-- ICONES -->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+
     <!-- STYLES -->
     <link rel="stylesheet" href="assets/styles/style.css" />
 
@@ -21,7 +24,19 @@
     <header id="header">
       <nav class="container">
         <a class="logo">beauty<span>salon</span>.</a>
-        <div class="menu">...</div>
+        <!-- MENU -->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Inicio</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contatos</a></li>
+          </ul>
+        </div>
+        <!-- /MENU -->
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
       </nav>
     </header>
 
@@ -32,7 +47,7 @@
             <img src="assets/img/img.jpg" alt="Mulher penteando outra mulher" />
           </div>
           <div class="text">
-            <h1>Saúde natural para os seus cabelos</h1>
+            <h2 class="title">Saúde natural para os seus cabelos</h2>
             <p>
               Um salão exclusivo em São Paulo, especializado em tratamentos
               naturais.
@@ -43,6 +58,80 @@
       </section>
 
       <div class="divider-1"></div>
+
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img src="assets/img/img2.jpg" alt="Três mulheres sorrindo" />
+          </div>
+          <div class="text">
+            <h2 class="title">Sobre nós</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
+              iure commodi unde perspiciatis quae provident dolore similique
+              dicta. Cupiditate quidem distinctio, tempora voluptates vitae esse
+              itaque corporis! Assumenda, repudiandae similique!
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur eaque obcaecati perspiciatis aut veniam deserunt
+              voluptates deleniti vero, culpa dolor saepe distinctio fuga
+              consequuntur. Neque recusandae delectus placeat quibusdam ea?
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+              sit! Amet commodi, aliquam reiciendis libero, corrupti perferendis
+              excepturi odio culpa minus ad necessitatibus ex quasi dolorum modi
+              doloremque, animi incidunt!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p>
+              Com mais de 10 anos no mercado, o <strong>Beautysalon</strong> já
+              conquistou clientes de inúmeros países com seus tratamentos
+              exclusivos e totalmente naturais
+            </p>
+          </header>
+          <div class="cards grid">
+            <div class="card">
+              <i class="icon-woman-hair"></i>
+              <h3 class="title">Terapia capilar</h3>
+              <p>
+                Terapia completa para couro cabeludo e fios, protegendo todos os
+                tipos de cabelos, inclusive os longos e finos.
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-trim"></i>
+              <h3 class="title">Cortes</h3>
+              <p>
+                A nossa equipe é repleta de profissionais renomados, famosos por
+                lançarem tendências com cortes diferenciados e clássicos.
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-cosmetic"></i>
+              <h3 class="title">Tratamentos</h3>
+              <p>
+                O beautysalon conta com diversos tratamentos naturais e
+                totalmente veganos, para qualquer tipo de cabelo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
