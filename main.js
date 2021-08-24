@@ -17,10 +17,11 @@ links.forEach(element => {
 })
 
 // Header Scroll - Add shadow
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', event => {
+function changeHeaderWhenScroll() {
+  const header = document.querySelector('#header')
+  const navHeight = header.offsetHeight
+
   if (window.scrollY >= navHeight) {
     //scroll is greater than header height
     header.classList.add('scroll')
@@ -28,7 +29,7 @@ window.addEventListener('scroll', event => {
     // less than header height
     header.classList.remove('scroll')
   }
-})
+}
 
 // Testimonials carrousel slider swiper
 
@@ -55,7 +56,24 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links`,
+  #contact .text, #contact .links,
+  footer .brand, footer .social`,
 
   { interval: 100 }
 )
+
+// BACK TO TOP
+function backToTopButton() {
+  const backToTopButton = document.querySelector('.back-to-top')
+  if (window.scrollY >= 500) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+// When Scroll
+window.addEventListener('scroll', event => {
+  changeHeaderWhenScroll()
+  backToTopButton()
+})
