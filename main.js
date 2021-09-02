@@ -78,8 +78,35 @@ function backToTopButton() {
   }
 }
 
+// Active menu conforms to the active section on the page
+
+const sections = document.querySelectorAll('main section[id]')
+function activateMenuAtCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+
+    const checkpointStart = checkpoint >= sectionTop
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+    if (checkpointStart && checkpointEnd) {
+      document
+        .querySelector(`nav ul li a[href*=${sectionId}]`)
+        .classList.add('active')
+    } else {
+      document
+        .querySelector(`nav ul li a[href*=${sectionId}]`)
+        .classList.remove('active')
+    }
+  })
+}
+
 // When Scroll
 window.addEventListener('scroll', event => {
   changeHeaderWhenScroll()
   backToTopButton()
+  activateMenuAtCurrentSection()
 })
